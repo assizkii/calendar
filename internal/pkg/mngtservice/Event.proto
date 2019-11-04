@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option go_package = "mngtservice";
+
+package mngtservice;
+
+import "google/protobuf/timestamp.proto";
+
+enum EventType {
+    UNIVERSAL = 0;
+    MEET = 1;
+    CALL = 2;
+    EMAIL = 3;
+}
+
+
+message Event {
+    int32 id = 1;
+    string title = 2;
+    string description = 3;
+    EventType type = 4;
+    google.protobuf.Timestamp from = 5;
+    google.protobuf.Timestamp to = 6;
+}
+
