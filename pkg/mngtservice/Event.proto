@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "mngtservice";
+option go_package = "github.com/assizkii/calendar/pkg/mngtservice";
 
 package mngtservice;
 
