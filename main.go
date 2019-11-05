@@ -9,7 +9,7 @@ import (
 	"os"
 )
 
-//go:generate protoc --go_out=paths=source_relative:. internal/pkg/mngtservice/Event.proto
+//go:generate protoc --go_out=paths=source_relative:. pkg/mngtservice/Event.proto
 
 var (
 	appConf  calendar.Config

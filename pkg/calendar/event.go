@@ -1,9 +1,9 @@
 package calendar
 
 import (
+	"fmt"
 	"github.com/assizkii/calendar/pkg/mngtservice"
 	"github.com/assizkii/calendar/pkg/storage"
-	"fmt"
 	"github.com/golang/protobuf/ptypes/timestamp"
 	"log"
 	"sort"
