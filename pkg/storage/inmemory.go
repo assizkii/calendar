@@ -1,9 +1,9 @@
 package storage
 
 import (
-	"calendar/pkg/mngtservice"
 	"errors"
 	"fmt"
+	"github.com/assizkii/calendar/pkg/mngtservice"
 	"strings"
 	"sync"
 )

@@ -1,7 +1,7 @@
 package storage
 
 import (
-	"calendar/pkg/mngtservice"
+	"github.com/assizkii/calendar/pkg/mngtservice"
 )
 
 type EventStorage interface {
