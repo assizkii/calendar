@@ -1,8 +1,8 @@
 package calendar
 
 import (
-	"calendar/internal/pkg/mngtservice"
-	"calendar/internal/pkg/storage"
+	"github.com/assizkii/calendar/pkg/mngtservice"
+	"github.com/assizkii/calendar/pkg/storage"
 	"fmt"
 	"github.com/golang/protobuf/ptypes/timestamp"
 	"log"
@@ -10,6 +10,7 @@ import (
 	"strconv"
 	"time"
 )
+
 
 func GenerateEvents() {
 	eventStorage := storage.New()
