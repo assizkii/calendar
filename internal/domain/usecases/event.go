@@ -1,9 +1,9 @@
-package calendar
+package usecases
 
 import (
+	"calendar/internal/adapters/storages"
+	"calendar/internal/domain/entities"
 	"fmt"
-	"github.com/assizkii/calendar/pkg/mngtservice"
-	"github.com/assizkii/calendar/pkg/storage"
 	"github.com/golang/protobuf/ptypes/timestamp"
 	"log"
 	"sort"
@@ -13,7 +13,7 @@ import (
 
 
 func GenerateEvents() {
-	eventStorage := storage.New()
+	eventStorage := storages.NewInmemoryStorage()
 
 	newYear := time.Date(2019, 12, 31, 23, 59, 59, 0, time.UTC)
 	eventStart := new(timestamp.Timestamp)
@@ -24,7 +24,7 @@ func GenerateEvents() {
 		eventStart.Seconds = int64(newYear.Unix())
 		eventEnd.Seconds = int64(finish.Unix())
 
-		p := new(mngtservice.Event)
+		p := new(entities.Event)
 		p.Id = int32(i)
 		p.Title = "Vacation day " + strconv.Itoa(i)
 		p.Description = "Event_" + strconv.Itoa(i) + "_Description"

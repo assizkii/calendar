@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-option go_package = "github.com/assizkii/calendar/pkg/mngtservice";
+option go_package = "github.com/assizkii/calendar/internal/domain/entities";
 
-package mngtservice;
+package entities;
 
 import "google/protobuf/timestamp.proto";
 

@@ -1,23 +1,24 @@
-package storage
+package storages
 
 import (
+	"calendar/internal/domain/entities"
+	"calendar/internal/domain/interfaces"
 	"errors"
 	"fmt"
-	"github.com/assizkii/calendar/pkg/mngtservice"
 	"strings"
 	"sync"
 )
 
 type EventMemoryStorage struct {
 	mx    sync.RWMutex
-	store map[int32]*mngtservice.Event
+	store map[int32]*entities.Event
 }
 
-func New() EventStorage {
-	return &EventMemoryStorage{store: map[int32]*mngtservice.Event{}}
+func NewInmemoryStorage() interfaces.EventStorage {
+	return &EventMemoryStorage{store: map[int32]*entities.Event{}}
 }
 
-func (em *EventMemoryStorage) Get(id int32) (*mngtservice.Event, error) {
+func (em *EventMemoryStorage) Get(id int32) (*entities.Event, error) {
 	em.mx.RLock()
 	defer em.mx.RUnlock()
 	event, ok := em.store[id]
@@ -29,7 +30,7 @@ func (em *EventMemoryStorage) Get(id int32) (*mngtservice.Event, error) {
 	return event, nil
 }
 
-func (em *EventMemoryStorage) Add(e *mngtservice.Event) error {
+func (em *EventMemoryStorage) Add(e *entities.Event) error {
 	if err := em.Validate(e); err != nil {
 		return err
 	}
@@ -42,7 +43,7 @@ func (em *EventMemoryStorage) Add(e *mngtservice.Event) error {
 	return nil
 }
 
-func (em *EventMemoryStorage) Update(id int32, e mngtservice.Event) error {
+func (em *EventMemoryStorage) Update(id int32, e entities.Event) error {
 	if _, err := em.Get(id); err != nil {
 		return err
 	}
@@ -71,14 +72,14 @@ func (em *EventMemoryStorage) Delete(id int32) error {
 	return nil
 }
 
-func (em *EventMemoryStorage) List() (map[int32]*mngtservice.Event, error) {
+func (em *EventMemoryStorage) List() (map[int32]*entities.Event, error) {
 	em.mx.RLock()
 	defer em.mx.RUnlock()
 
 	return em.store, nil
 }
 
-func (em *EventMemoryStorage) Validate(e *mngtservice.Event) error {
+func (em *EventMemoryStorage) Validate(e *entities.Event) error {
 	if e.Id == 0 {
 		return errors.New("ID field cannot be 0")
 	}
