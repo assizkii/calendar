@@ -1,7 +1,7 @@
 package interfaces
 
 import (
-	"calendar/internal/domain/entities"
+	"github.com/assizkii/calendar/internal/domain/entities"
 )
 
 type EventStorage interface {

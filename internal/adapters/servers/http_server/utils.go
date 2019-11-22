@@ -1,7 +1,7 @@
 package http_server
 
 import (
-	"calendar/internal/domain/entities"
+	"github.com/assizkii/calendar/internal/domain/entities"
 	"encoding/json"
 	"github.com/golang/protobuf/ptypes"
 	"net/http"

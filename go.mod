@@ -1,4 +1,4 @@
-module calendar
+module github.com/assizkii/calendar
 
 go 1.13
 

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"calendar/internal/adapters/servers/http_server"
-	"calendar/internal/domain/usecases"
+	"github.com/assizkii/calendar/internal/adapters/servers/http_server"
+	"github.com/assizkii/calendar/internal/domain/usecases"
 	"flag"
 )
 

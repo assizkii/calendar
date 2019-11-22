@@ -1,7 +1,7 @@
 package storages
 
 import (
-	"calendar/internal/domain/entities"
+	"github.com/assizkii/calendar/internal/domain/entities"
 	"errors"
 	"fmt"
 	"sort"
