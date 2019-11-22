@@ -1,12 +1,9 @@
 package main
 
 import (
-	"calendar/internal/adapters/configs"
-	"calendar/internal/adapters/servers"
+	"calendar/internal/adapters/servers/http_server"
 	"calendar/internal/domain/usecases"
 	"flag"
-	"log"
-	"os"
 )
 
 //go:generate protoc --go_out=paths=source_relative:. internal/domain/entities/Event.proto
@@ -21,16 +18,10 @@ func init() {
 
 func main() {
 
-	appConf := configs.ReadHttpConfig(confPath)
+	appConf := http_server.ReadHttpConfig("configs/conf.yaml")
 
-	file, err := os.OpenFile(appConf.LogFile, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
-	if err != nil {
-		log.Fatalf("error opening file: %v", err)
-	}
-	defer file.Close()
-	log.SetOutput(file)
+	http_server.RunHttpServer(appConf)
 
-	servers.RunHttpServer(appConf)
 	usecases.GenerateEvents()
 }
 
