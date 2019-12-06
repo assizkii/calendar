@@ -1,7 +1,7 @@
 package storages
 
 import (
-	"github.com/assizkii/calendar/internal/domain/entities"
+	"calendar/internal/domain/entities"
 	"errors"
 	"fmt"
 	"sort"
@@ -13,7 +13,7 @@ import (
 
 type EventMemoryStorage struct {
 	counter int32
-	mx    *sync.RWMutex
+	mx    sync.RWMutex
 	store map[int32]entities.Event
 }
 
@@ -24,7 +24,7 @@ func GetInstance() *EventMemoryStorage {
 	once.Do(func() {
 		instance =  &EventMemoryStorage{
 			counter : 1,
-			mx   : &sync.RWMutex{},
+			mx   : sync.RWMutex{},
 			store: make(map[int32]entities.Event),
 		}
 	})
@@ -124,6 +124,8 @@ func (em *EventMemoryStorage) FilterByDate(from time.Time, to time.Time) []entit
 
 
 func (em *EventMemoryStorage) GetNewId() int32 {
+	em.mx.Lock()
+	defer em.mx.Unlock()
 	id := em.counter
 	em.counter++
 	return id

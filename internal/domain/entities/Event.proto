@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/assizkii/calendar/internal/domain/entities";
+option go_package = "entities";
 
 package entities;
 
@@ -13,6 +13,14 @@ enum EventType {
     EMAIL = 3;
 }
 
+enum Period {
+    ALL = 0;
+    DAY = 1;
+    WEEK = 2;
+    MONTH = 3;
+}
+
+
 
 message Event {
     int32 id = 1;
@@ -23,3 +31,38 @@ message Event {
     google.protobuf.Timestamp to = 6;
 }
 
+
+message EventCreateRequest {
+    Event event = 1;
+}
+message EventCreateResponse {
+    Event event = 1;
+}
+
+message EventUpdateRequest {
+    Event event = 1;
+}
+message EventUpdateResponse {
+    int32 id = 1;
+}
+
+message EventDeleteRequest {
+    int32 id = 1;
+}
+message EventDeleteResponse {
+    bool success = 1;
+}
+
+message EventListRequest {
+    Period period = 1;
+}
+message EventListResponse {
+    Event event = 1;
+}
+
+service EventService {
+    rpc CreateEvent(EventCreateRequest) returns (EventCreateResponse);
+    rpc UpdateEvent(EventUpdateRequest) returns (EventUpdateResponse);
+    rpc DeleteEvent(EventDeleteRequest) returns (EventDeleteResponse);
+    rpc EventList(EventListRequest) returns (stream EventListResponse);
+}

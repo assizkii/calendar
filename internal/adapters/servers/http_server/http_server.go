@@ -1,12 +1,13 @@
 package http_server
 
 import (
+	"calendar/internal/adapters/configs"
 	"log"
 	"net/http"
 )
 
 
-func RunHttpServer(appConf HttpConfig) {
+func Run(appConf configs.ServerConfig) {
 
 	handler := &EventHandler{}
 
