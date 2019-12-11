@@ -1,0 +1,60 @@
+syntax = "proto3";
+
+option go_package = "entities";
+
+package entities;
+
+import "google/protobuf/timestamp.proto";
+
+enum Period {
+    ALL = 0;
+    DAY = 1;
+    WEEK = 2;
+    MONTH = 3;
+}
+
+message Event {
+    string id = 1;
+    string title = 2;
+    string description = 3;
+    string owner_id = 4;
+    google.protobuf.Timestamp start = 5;
+    google.protobuf.Timestamp duration = 6;
+    google.protobuf.Timestamp notify_time = 7;
+}
+
+
+message EventCreateRequest {
+    Event event = 1;
+}
+message EventCreateResponse {
+    Event event = 1;
+}
+
+message EventUpdateRequest {
+    Event event = 1;
+}
+message EventUpdateResponse {
+    string id = 1;
+}
+
+message EventDeleteRequest {
+    string id = 1;
+}
+message EventDeleteResponse {
+    bool success = 1;
+}
+
+message EventListRequest {
+    Period period = 1;
+}
+message EventListResponse {
+    Event event = 1;
+}
+
+service EventService {
+    rpc CreateEvent(EventCreateRequest) returns (EventCreateResponse);
+    rpc UpdateEvent(EventUpdateRequest) returns (EventUpdateResponse);
+    rpc DeleteEvent(EventDeleteRequest) returns (EventDeleteResponse);
+    rpc EventList(EventListRequest) returns (stream EventListResponse);
+}
