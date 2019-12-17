@@ -16,10 +16,10 @@ limitations under the License.
 package cmd
 
 import (
-	"github.com/assizkii/calendar/api/internal/domain/entities"
 	"context"
 	"errors"
 	"fmt"
+	"github.com/assizkii/calendar/api/internal/domain/entities"
 	"io"
 
 	"github.com/spf13/cobra"
@@ -29,7 +29,7 @@ import (
 var listCmd = &cobra.Command{
 	Use:   "list",
 	Short: "event list",
-	Long: `Event list for any time: day, week or month`,
+	Long:  `Event list for any time: day, week or month`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 
 		period, err := cmd.Flags().GetString("period")
@@ -40,14 +40,14 @@ var listCmd = &cobra.Command{
 		}
 
 		switch period {
-			case "day":
-				eventPeriod = entities.Period_DAY
-			case "week":
-				eventPeriod = entities.Period_WEEK
-			case "month":
-				eventPeriod = entities.Period_MONTH
-			default:
-				err = errors.New("you must set correct period")
+		case "day":
+			eventPeriod = entities.Period_DAY
+		case "week":
+			eventPeriod = entities.Period_WEEK
+		case "month":
+			eventPeriod = entities.Period_MONTH
+		default:
+			err = errors.New("you must set correct period")
 
 		}
 
@@ -56,7 +56,7 @@ var listCmd = &cobra.Command{
 		}
 
 		req := &entities.EventListRequest{
-			Period:eventPeriod,
+			Period: eventPeriod,
 		}
 		stream, err := client.EventList(context.Background(), req)
 
@@ -74,7 +74,6 @@ var listCmd = &cobra.Command{
 			// If everything went well use the generated getter to print the event message
 			fmt.Println(res.Event)
 		}
-
 
 		return nil
 

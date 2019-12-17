@@ -3,7 +3,6 @@ package interfaces
 import (
 	"github.com/assizkii/calendar/api/internal/domain/entities"
 	"time"
-
 )
 
 type EventStorage interface {
@@ -15,4 +14,3 @@ type EventStorage interface {
 	List() map[string]entities.Event
 	FilterByDate(start time.Time) []entities.Event
 }
-

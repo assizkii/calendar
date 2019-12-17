@@ -16,9 +16,9 @@ limitations under the License.
 package cmd
 
 import (
-	entities "github.com/assizkii/calendar/api/internal/domain/entities"
 	"context"
 	"fmt"
+	"github.com/assizkii/calendar/api/internal/domain/entities"
 	"github.com/golang/protobuf/ptypes"
 	"time"
 
@@ -29,7 +29,7 @@ import (
 var updateCmd = &cobra.Command{
 	Use:   "update",
 	Short: "Update event",
-	Long: `Update event`,
+	Long:  `Update event`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		initClient()
 		id, err := cmd.Flags().GetString("id")
@@ -39,7 +39,6 @@ var updateCmd = &cobra.Command{
 		ownerId, err := cmd.Flags().GetString("owner_id")
 		duration, err := cmd.Flags().GetString("duration")
 		notify, err := cmd.Flags().GetString("notify")
-
 
 		if err != nil {
 			return err
@@ -53,22 +52,22 @@ var updateCmd = &cobra.Command{
 			return err
 		}
 
-		eventStart, err :=  ptypes.TimestampProto(timeStart)
-		eventDuration, err :=  ptypes.TimestampProto(durationTime)
-		eventNotify, err :=  ptypes.TimestampProto(notifyTime)
+		eventStart, err := ptypes.TimestampProto(timeStart)
+		eventDuration, err := ptypes.TimestampProto(durationTime)
+		eventNotify, err := ptypes.TimestampProto(notifyTime)
 
 		if err != nil {
 			return err
 		}
 
 		event := &entities.Event{
-			Id: id,
-			Title: title,
+			Id:          id,
+			Title:       title,
 			Description: description,
-			Start:  eventStart,
-			OwnerId: ownerId,
-			Duration: eventDuration,
-			NotifyTime: eventNotify,
+			Start:       eventStart,
+			OwnerId:     ownerId,
+			Duration:    eventDuration,
+			NotifyTime:  eventNotify,
 		}
 
 		res, err := client.UpdateEvent(

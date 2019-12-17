@@ -1,9 +1,9 @@
 package database
 
 import (
+	"fmt"
 	"github.com/assizkii/calendar/api/internal/domain/entities"
 	"github.com/assizkii/calendar/api/internal/domain/interfaces"
-	"fmt"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
 	"time"
@@ -46,7 +46,7 @@ func New(connection *gorm.DB) interfaces.EventStorage {
 	return &PgStorage{connection}
 }
 
-func GetConnection() *gorm.DB   {
+func GetConnection() *gorm.DB {
 	db, err := gorm.Open("postgres", fmt.Sprintf("host=%s user=%s dbname=%s sslmode=disable", "172.18.0.2", "postgres", "event_calendar"))
 	if err != nil {
 		fmt.Println(err.Error())
@@ -57,7 +57,7 @@ func GetConnection() *gorm.DB   {
 	return db
 }
 
-func RunMigrations(DB *gorm.DB)  {
+func RunMigrations(DB *gorm.DB) {
 	DB.AutoMigrate(
 		&entities.Event{},
 	)

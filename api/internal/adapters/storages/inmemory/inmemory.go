@@ -1,10 +1,10 @@
 package inmemory
 
 import (
-	"github.com/assizkii/calendar/api/internal/domain/entities"
-	"github.com/assizkii/calendar/api/internal/domain/interfaces"
 	"errors"
 	"fmt"
+	"github.com/assizkii/calendar/api/internal/domain/entities"
+	"github.com/assizkii/calendar/api/internal/domain/interfaces"
 	"github.com/google/uuid"
 	"sort"
 	"strings"
@@ -12,20 +12,17 @@ import (
 	"time"
 )
 
-
 type EventMemoryStorage struct {
 	mx    sync.RWMutex
 	store map[string]entities.Event
 }
 
-
 func New() interfaces.EventStorage {
 	return &EventMemoryStorage{
-		mx   : sync.RWMutex{},
+		mx:    sync.RWMutex{},
 		store: make(map[string]entities.Event),
 	}
 }
-
 
 func (em *EventMemoryStorage) Get(id string) (entities.Event, error) {
 	em.mx.RLock()
@@ -88,7 +85,6 @@ func (em *EventMemoryStorage) List() map[string]entities.Event {
 	return em.store
 }
 
-
 func (em *EventMemoryStorage) Validate(e entities.Event) error {
 
 	switch "" {
@@ -106,7 +102,7 @@ func (em *EventMemoryStorage) FilterByDate(from time.Time) []entities.Event {
 	var filteredEvents []entities.Event
 
 	for _, event := range em.List() {
-		if  event.GetStart().GetSeconds() >= from.Unix() {
+		if event.GetStart().GetSeconds() >= from.Unix() {
 			filteredEvents = append(filteredEvents, event)
 		}
 	}
@@ -116,7 +112,3 @@ func (em *EventMemoryStorage) FilterByDate(from time.Time) []entities.Event {
 	})
 	return filteredEvents
 }
-
-
-
-

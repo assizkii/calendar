@@ -16,9 +16,9 @@ limitations under the License.
 package cmd
 
 import (
-	"github.com/assizkii/calendar/api/internal/domain/entities"
 	"context"
 	"fmt"
+	"github.com/assizkii/calendar/api/internal/domain/entities"
 	"github.com/spf13/cobra"
 )
 
@@ -26,8 +26,8 @@ import (
 var deleteCmd = &cobra.Command{
 	Use:   "delete",
 	Short: "Delete event",
-	Long: `Delete event`,
-	RunE: func(cmd *cobra.Command, args []string) error{
+	Long:  `Delete event`,
+	RunE: func(cmd *cobra.Command, args []string) error {
 		initClient()
 		id, err := cmd.Flags().GetString("id")
 		if err != nil {

@@ -27,7 +27,7 @@ import (
 var runServerCmd = &cobra.Command{
 	Use:   "runServer",
 	Short: "start grpc server",
-	Long: `start grpc server`,
+	Long:  `start grpc server`,
 	Run: func(cmd *cobra.Command, args []string) {
 		grpc_server.StartServer()
 	},
