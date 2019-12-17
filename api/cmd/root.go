@@ -1,8 +1,8 @@
 package cmd
 
 import (
-	"calendar/api/internal/adapters/servers/grpc_server"
-	"calendar/api/internal/domain/entities"
+	"github.com/assizkii/calendar/api/internal/adapters/servers/grpc_server"
+	"github.com/assizkii/calendar/api/internal/domain/entities"
 	"context"
 	"fmt"
 	"github.com/spf13/cobra"

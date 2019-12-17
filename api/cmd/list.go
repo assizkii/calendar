@@ -16,7 +16,7 @@ limitations under the License.
 package cmd
 
 import (
-	"calendar/api/internal/domain/entities"
+	"github.com/assizkii/calendar/api/internal/domain/entities"
 	"context"
 	"errors"
 	"fmt"

@@ -16,7 +16,7 @@ limitations under the License.
 package cmd
 
 import (
-	entities "calendar/api/internal/domain/entities"
+	entities "github.com/assizkii/calendar/api/internal/domain/entities"
 	"context"
 	"fmt"
 	"github.com/golang/protobuf/ptypes"

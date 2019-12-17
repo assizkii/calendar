@@ -1,8 +1,8 @@
 package database
 
 import (
-	"calendar/api/internal/domain/entities"
-	"calendar/api/internal/domain/interfaces"
+	"github.com/assizkii/calendar/api/internal/domain/entities"
+	"github.com/assizkii/calendar/api/internal/domain/interfaces"
 	"fmt"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"

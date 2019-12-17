@@ -1,9 +1,9 @@
 package grpc_server
 
 import (
-	"calendar/api/internal/adapters/storages/inmemory"
-	"calendar/api/internal/domain/entities"
-	"calendar/api/internal/utils"
+	"github.com/assizkii/calendar/api/internal/adapters/storages/inmemory"
+	"github.com/assizkii/calendar/api/internal/domain/entities"
+	"github.com/assizkii/calendar/api/internal/utils"
 	"fmt"
 	grpc_middleware "github.com/grpc-ecosystem/go-grpc-middleware"
 	grpc_zap "github.com/grpc-ecosystem/go-grpc-middleware/logging/zap"
@@ -27,16 +27,12 @@ func StartServer() {
 		log.Fatalf("failed to listen %v", err)
 	}
 
-	//db := database.GetDBConnection()
-	//database.RunMigrations(db)
-	//defer db.Close()
-
 	logger, err := utils.InitLogger(appConf)
 	if err != nil {
 		log.Fatalf("Failed to init logger: %v", err)
 	}
 
-
+	// start server with logger interceptor
 	server := grpc.NewServer(grpc.UnaryInterceptor(grpc_middleware.ChainUnaryServer(
 		grpc_ctxtags.UnaryServerInterceptor(),
 		grpc_opentracing.UnaryServerInterceptor(),
@@ -44,10 +40,10 @@ func StartServer() {
 		grpc_recovery.UnaryServerInterceptor(),
 	)),)
 
+	// init storage type
 	storage :=  inmemory.New()
 
 	srv := &EventServiceServer{storage}
-
 	entities.RegisterEventServiceServer(server, srv)
 
 	// Start the server in a child routine

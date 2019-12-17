@@ -1,7 +1,7 @@
 package interfaces
 
 import (
-	"calendar/api/internal/domain/entities"
+	"github.com/assizkii/calendar/api/internal/domain/entities"
 	"time"
 
 )

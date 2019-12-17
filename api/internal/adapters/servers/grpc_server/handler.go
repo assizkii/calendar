@@ -1,8 +1,8 @@
 package grpc_server
 
 import (
-	"calendar/api/internal/domain/entities"
-	"calendar/api/internal/domain/interfaces"
+	"github.com/assizkii/calendar/api/internal/domain/entities"
+	"github.com/assizkii/calendar/api/internal/domain/interfaces"
 	"context"
 	"errors"
 	"fmt"

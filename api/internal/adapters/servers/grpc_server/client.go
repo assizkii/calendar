@@ -1,7 +1,7 @@
 package grpc_server
 
 import (
-	"calendar/api/internal/domain/entities"
+	"github.com/assizkii/calendar/api/internal/domain/entities"
 	"context"
 	"fmt"
 	"google.golang.org/grpc"
