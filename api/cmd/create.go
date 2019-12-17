@@ -81,6 +81,7 @@ var createCmd = &cobra.Command{
 		if err != nil {
 			return err
 		}
+
 		fmt.Printf("Event created: %s\n", res.Event.Id)
 		return nil
 	},

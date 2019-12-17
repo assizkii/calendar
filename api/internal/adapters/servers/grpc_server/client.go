@@ -1,4 +1,4 @@
-package grpc
+package grpc_server
 
 import (
 	"calendar/api/internal/domain/entities"
@@ -8,7 +8,9 @@ import (
 	"log"
 )
 
-func StartClient(requestCtx context.Context, requestOpts grpc.DialOption) entities.EventServiceClient {
+
+
+func StartClient(requestCtx context.Context, requestOpts grpc.DialOption, port string) entities.EventServiceClient {
 
 	// After Cobra root config init
 	// We initialize the client
@@ -16,10 +18,10 @@ func StartClient(requestCtx context.Context, requestOpts grpc.DialOption) entiti
 
 
 	// Dial the server, returns a client connection
-	conn, err := grpc.DialContext(requestCtx,"127.0.0.1:50051", requestOpts)
+	conn, err := grpc.DialContext(requestCtx, port, requestOpts)
 
 	if err != nil {
-		log.Fatalf("Unable to establish client connection to 127.0.0.1:50052: %v", err)
+		log.Fatalf("Unable to establish client connection to : %s, %v", port, err)
 	}
 
 	// Instantiate the EventServiceClient with our client connection to the server

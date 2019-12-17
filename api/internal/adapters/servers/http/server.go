@@ -1,13 +1,13 @@
 package http
 
 import (
-	configs2 "calendar/api/internal/adapters/configs"
+	"calendar/api/internal/adapters/utils"
 	"log"
 	"net/http"
 )
 
 
-func Run(appConf configs2.ServerConfig) {
+func Run(appConf configs.ServerConfig) {
 
 	handler := &EventHandler{}
 

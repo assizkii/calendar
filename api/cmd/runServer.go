@@ -16,10 +16,11 @@ limitations under the License.
 package cmd
 
 import (
-	"calendar/api/internal/adapters/servers/grpc"
-	"calendar/api/internal/adapters/storages/inmemory"
+	"calendar/api/internal/adapters/servers/grpc_server"
+
 	"fmt"
 	"github.com/spf13/cobra"
+	"github.com/spf13/viper"
 )
 
 // runServerCmd represents the runServer command
@@ -28,16 +29,24 @@ var runServerCmd = &cobra.Command{
 	Short: "start grpc server",
 	Long: `start grpc server`,
 	Run: func(cmd *cobra.Command, args []string) {
-		//db := database.GetDBConnection()
-		//database.RunMigrations(db)
-		//defer db.Close()
-		fmt.Println("Starting Calendar Service Client")
-		storage :=  inmemory.New()
-
-		grpc.StartServer(storage)
+		grpc_server.StartServer()
 	},
 }
 
 func init() {
+	if cfgFile != "" {
+		// Use config file from the flag.
+		viper.SetConfigFile(cfgFile)
+	} else {
+		// Search config in home directory with name ".calendar" (without extension).
+		viper.AddConfigPath("api/configs")
+	}
+
+	viper.AutomaticEnv() // read in environment variables that match
+
+	// If a config file is found, read it in.
+	if err := viper.ReadInConfig(); err == nil {
+		fmt.Println("Using config file:", viper.ConfigFileUsed())
+	}
 	rootCmd.AddCommand(runServerCmd)
 }
