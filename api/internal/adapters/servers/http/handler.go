@@ -1,7 +1,7 @@
 package http
 
 import (
-	"github.com/assizkii/calendar/internal/adapters/storages"
+	"calendar/internal/adapters/storages"
 	"net/http"
 	"strconv"
 	"time"

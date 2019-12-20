@@ -2,18 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ead2ea1-4f7b-4608-a4c6-f7655beea292" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/cmd/create.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/cmd/create.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/cmd/delete.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/cmd/delete.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/cmd/list.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/cmd/list.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/cmd/root.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/cmd/root.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/cmd/runServer.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/cmd/runServer.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/cmd/update.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/cmd/update.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/configs/conf.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/configs/conf.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/api/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/api/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/internal/adapters/servers/grpc_server/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/internal/adapters/servers/grpc_server/client.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/internal/adapters/servers/grpc_server/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/internal/adapters/servers/grpc_server/handler.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/internal/adapters/servers/grpc_server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/internal/adapters/servers/grpc_server/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/internal/adapters/storages/database/pg.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/internal/adapters/storages/database/pg.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/internal/adapters/storages/inmemory/inmemory.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/internal/adapters/storages/inmemory/inmemory.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/internal/adapters/servers/http/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/internal/adapters/servers/http/handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/internal/adapters/servers/http/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/internal/adapters/servers/http/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/internal/adapters/servers/http/utils.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/internal/adapters/servers/http/utils.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/internal/adapters/storages/database/pg.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/internal/adapters/storages/database_storage/pg.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/internal/adapters/storages/inmemory/inmemory.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/internal/adapters/storages/inmemory_storage/inmemory.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/internal/domain/entities/Event.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/internal/domain/entities/Event.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/internal/domain/entities/Event.proto" beforeDir="false" afterPath="$PROJECT_DIR$/api/internal/domain/entities/Event.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/internal/domain/interfaces/event_storage.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/internal/domain/interfaces/event_storage.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/internal/utils/server_config.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/internal/utils/server_config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/logs/application.log" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,37 +54,35 @@
         <item name="@172.18.0.2" type="feb32156:DbDataSourceImpl" />
         <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@172.18.0.2" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="calendar: database" type="162271b6:PgImplModel$Database" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@172.18.0.2" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="event_calendar: database" type="162271b6:PgImplModel$Database" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@172.18.0.2" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="event_calendar: database" type="162271b6:PgImplModel$Database" />
-        <item name="access methods" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@172.18.0.2" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="event_calendar: database" type="162271b6:PgImplModel$Database" />
-        <item name="extensions" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
     </expand>
     <select />
   </component>
+  <component name="ExecutionTargetDialog">
+    <checked>
+      <node key="732d0d81-a4be-43c0-8aa7-4bd6651ff552" />
+    </checked>
+  </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/go.mod">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -105,16 +115,22 @@
       <find>client</find>
       <find>requestOpts</find>
       <find>Encoding</find>
+      <find>EventList</find>
+      <find>github.com/assizkii/calendar</find>
+      <find>Validate</find>
+      <find>owner</find>
       <find>calendar/api</find>
     </findStrings>
     <replaceStrings>
       <replace>github.com/assizkii/calendar/</replace>
       <replace>entities</replace>
+      <replace>calendar</replace>
       <replace>github.com/assizkii/calendar/api</replace>
     </replaceStrings>
     <dirStrings>
-      <dir>$PROJECT_DIR$</dir>
       <dir>$PROJECT_DIR$/api</dir>
+      <dir>$PROJECT_DIR$/api/internal</dir>
+      <dir>$PROJECT_DIR$</dir>
     </dirStrings>
   </component>
   <component name="GOROOT" path="/usr/local/go1.13.1.linux-amd64" />
@@ -124,14 +140,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/internal/adapters/servers/http_server/middleware.go" />
-        <option value="$PROJECT_DIR$/cmd/update.go" />
-        <option value="$PROJECT_DIR$/cmd/delete.go" />
-        <option value="$PROJECT_DIR$/cmd/runServer.go" />
-        <option value="$PROJECT_DIR$/main.go" />
-        <option value="$PROJECT_DIR$/cmd/list.go" />
-        <option value="$PROJECT_DIR$/server/main.go" />
-        <option value="$PROJECT_DIR$/internal/adapters/servers/grpc_server/grpc_client.go" />
         <option value="$PROJECT_DIR$/internal/adapters/servers/grpc_server/grpc_server.go" />
         <option value="$PROJECT_DIR$/internal/domain/entities/Event.proto" />
         <option value="$PROJECT_DIR$/internal/adapters/servers/grpc_server/handler.go" />
@@ -145,9 +153,7 @@
         <option value="$PROJECT_DIR$/api/internal/adapters/storages/postgresql.go" />
         <option value="$PROJECT_DIR$/api/internal/adapters/storages/database.go" />
         <option value="$PROJECT_DIR$/api/internal/adapters/storages/inmemory.go" />
-        <option value="$PROJECT_DIR$/api/internal/domain/entities/Event.proto" />
         <option value="$PROJECT_DIR$/api/cmd/runGrpcServer.go" />
-        <option value="$PROJECT_DIR$/api/main.go" />
         <option value="$PROJECT_DIR$/client/cmd/root.go" />
         <option value="$PROJECT_DIR$/client/main.go" />
         <option value="$PROJECT_DIR$/api/internal/adapters/servers/utils/logger.go" />
@@ -157,24 +163,34 @@
         <option value="$PROJECT_DIR$/api/internal/adapters/configs/server_config.go" />
         <option value="$PROJECT_DIR$/api/internal/adapters/servers/grpc/handler.go" />
         <option value="$PROJECT_DIR$/api/internal/adapters/servers/grpc/client.go" />
-        <option value="$PROJECT_DIR$/api/internal/utils/server_config.go" />
         <option value="$PROJECT_DIR$/api/internal/adapters/servers/grpc_server/middleware.go" />
-        <option value="$PROJECT_DIR$/api/configs/conf.yaml" />
         <option value="$PROJECT_DIR$/api/internal/utils/logger.go" />
-        <option value="$PROJECT_DIR$/api/logs/application.log" />
-        <option value="$PROJECT_DIR$/api/go.mod" />
         <option value="$PROJECT_DIR$/api/internal/adapters/servers/grpc_server/client.go" />
-        <option value="$PROJECT_DIR$/api/cmd/create.go" />
         <option value="$PROJECT_DIR$/api/cmd/delete.go" />
-        <option value="$PROJECT_DIR$/api/cmd/list.go" />
-        <option value="$PROJECT_DIR$/api/cmd/root.go" />
+        <option value="$PROJECT_DIR$/api/internal/adapters/storages/inmemory/inmemory.go" />
+        <option value="$PROJECT_DIR$/../github.com/assizkii/calendar/api/cmd/list.go" />
+        <option value="$PROJECT_DIR$/api/logs/application.log" />
         <option value="$PROJECT_DIR$/api/cmd/runServer.go" />
+        <option value="$PROJECT_DIR$/api/cmd/root.go" />
+        <option value="$PROJECT_DIR$/../github.com/jinzhu/gorm/model_struct.go" />
+        <option value="$PROJECT_DIR$/api/cmd/list.go" />
+        <option value="$PROJECT_DIR$/api/internal/adapters/storages/database/pg.go" />
+        <option value="$PROJECT_DIR$/api/internal/adapters/storages/database_storage/event.sql.go" />
+        <option value="$PROJECT_DIR$/api/internal/adapters/storages/database_storage/event.sql" />
+        <option value="$PROJECT_DIR$/api/internal/adapters/storages/inmemory_storage/inmemory.go" />
+        <option value="$PROJECT_DIR$/api/internal/domain/interfaces/event_storage.go" />
+        <option value="$PROJECT_DIR$/api/cmd/create.go" />
         <option value="$PROJECT_DIR$/api/cmd/update.go" />
         <option value="$PROJECT_DIR$/api/internal/adapters/servers/grpc_server/handler.go" />
+        <option value="$PROJECT_DIR$/api/internal/domain/entities/Event.proto" />
+        <option value="$PROJECT_DIR$/api/internal/utils/server_config.go" />
+        <option value="$PROJECT_DIR$/api/configs/conf.yaml" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/api/internal/adapters/servers/grpc_server/server.go" />
-        <option value="$PROJECT_DIR$/api/internal/adapters/storages/database/pg.go" />
-        <option value="$PROJECT_DIR$/api/internal/adapters/storages/inmemory/inmemory.go" />
-        <option value="$PROJECT_DIR$/api/internal/domain/interfaces/event_storage.go" />
+        <option value="$PROJECT_DIR$/api/internal/adapters/storages/database_storage/pg.go" />
+        <option value="$PROJECT_DIR$/migrations/event.sql" />
+        <option value="$PROJECT_DIR$/api/go.mod" />
+        <option value="$PROJECT_DIR$/api/main.go" />
       </list>
     </option>
   </component>
@@ -190,6 +206,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -202,191 +219,10 @@
               <item name="calendar" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="cmd" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="configs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="internal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="internal" type="462c0819:PsiDirectoryNode" />
-              <item name="adapters" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="internal" type="462c0819:PsiDirectoryNode" />
-              <item name="adapters" type="462c0819:PsiDirectoryNode" />
-              <item name="servers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="internal" type="462c0819:PsiDirectoryNode" />
-              <item name="adapters" type="462c0819:PsiDirectoryNode" />
-              <item name="servers" type="462c0819:PsiDirectoryNode" />
-              <item name="grpc_server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="internal" type="462c0819:PsiDirectoryNode" />
-              <item name="adapters" type="462c0819:PsiDirectoryNode" />
-              <item name="storages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="internal" type="462c0819:PsiDirectoryNode" />
-              <item name="adapters" type="462c0819:PsiDirectoryNode" />
-              <item name="storages" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="internal" type="462c0819:PsiDirectoryNode" />
-              <item name="adapters" type="462c0819:PsiDirectoryNode" />
-              <item name="storages" type="462c0819:PsiDirectoryNode" />
-              <item name="inmemory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="internal" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="internal" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="internal" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="internal" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="usecases" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="GOPATH &lt;organizer&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
-            </path>
-            <path>
-              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="GOPATH &lt;organizer&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="GOPATH &lt;organizer&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="calendar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="GOPATH &lt;organizer&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="GOPATH &lt;organizer&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="cmd" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="GOPATH &lt;organizer&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="internal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="GOPATH &lt;organizer&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="internal" type="462c0819:PsiDirectoryNode" />
-              <item name="adapters" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="GOPATH &lt;organizer&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="internal" type="462c0819:PsiDirectoryNode" />
-              <item name="adapters" type="462c0819:PsiDirectoryNode" />
-              <item name="servers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="GOPATH &lt;organizer&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="internal" type="462c0819:PsiDirectoryNode" />
-              <item name="adapters" type="462c0819:PsiDirectoryNode" />
-              <item name="servers" type="462c0819:PsiDirectoryNode" />
-              <item name="grpc_server" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -403,19 +239,19 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/api/internal" />
-      <recent name="$PROJECT_DIR$/api/internal/adapters" />
-      <recent name="$PROJECT_DIR$/api/internal/adapters/servers" />
-      <recent name="$PROJECT_DIR$/api/internal/adapters/servers/utils" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client" />
       <recent name="$PROJECT_DIR$/api/cmd" />
       <recent name="$PROJECT_DIR$/internal/domain/entities" />
       <recent name="$PROJECT_DIR$/internal/domain/interface" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/api/internal/adapters/storages/database_storage/migrations" />
+      <recent name="$PROJECT_DIR$/api/internal" />
+      <recent name="$PROJECT_DIR$/api/internal/adapters" />
+      <recent name="$PROJECT_DIR$/api/internal/adapters/servers" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -481,9 +317,9 @@
     <frame x="1987" y="25" width="1853" height="1055" extended-state="6" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.14886552" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.15384616" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.28179824" />
+      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.38048247" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.29717764" side_tool="true" weight="0.32894737" />
       <window_info anchor="bottom" id="Version Control" order="3" />
@@ -491,7 +327,7 @@
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.32932165" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.2642544" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.3991228" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="11" />
@@ -506,86 +342,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/local/go1.13.1.linux-amd64/src/net/http/request.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="492" column="19" selection-start-line="492" selection-start-column="13" selection-end-line="492" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/internal/adapters/servers/http_server/http_config.go" />
-    <entry file="file://$PROJECT_DIR$/../github.com/assizkii/calendar/internal/adapters/storages/event_inmemory.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="652">
-          <caret line="121" column="25" selection-start-line="121" selection-start-column="11" selection-end-line="121" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../google.golang.org/grpc/clientconn.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="104" column="5" selection-start-line="104" selection-start-column="5" selection-end-line="104" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../google.golang.org/grpc/dialoptions.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3041">
-          <caret line="311" column="5" selection-start-line="311" selection-start-column="5" selection-end-line="311" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../google.golang.org/grpc/rpc_util.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="265" column="5" selection-start-line="265" selection-start-column="5" selection-end-line="265" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmd/runServer.go" />
-    <entry file="file://$PROJECT_DIR$/api/internal/adapters/servers/http/handler.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-          <folding>
-            <element signature="e#21#121#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../google.golang.org/grpc/examples/route_guide/client/client.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1401">
-          <caret line="61" column="18" selection-start-line="60" selection-start-column="4" selection-end-line="61" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://732d0d81-a4be-43c0-8aa7-4bd6651ff552/database/postgres/schema/public/sequence/events_id_seq">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/732d0d81-a4be-43c0-8aa7-4bd6651ff552/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="9" column="48" lean-forward="true" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
-          <folding>
-            <element signature="e#20#265#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/event_sheme.sql" />
-    <entry file="file://$PROJECT_DIR$/api/server/main.go" />
-    <entry file="das://732d0d81-a4be-43c0-8aa7-4bd6651ff552/database/calendar/schema/public/sequence/events_id_seq">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://732d0d81-a4be-43c0-8aa7-4bd6651ff552/database/event_calendar/extension/plpgsql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -604,32 +360,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../github.com/jinzhu/gorm/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="478" selection-start-line="478" selection-end-line="478" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/internal/domain/entities/Event.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/cmd/runGrpcServer.go" />
     <entry file="file://$PROJECT_DIR$/client/cmd/root.go" />
     <entry file="file://$PROJECT_DIR$/client/main.go" />
     <entry file="file://$PROJECT_DIR$/client/cmd/create.go" />
     <entry file="file://$PROJECT_DIR$/client/cmd/list.go" />
-    <entry file="file://$PROJECT_DIR$/api/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/internal/adapters/servers/http/server.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -645,13 +380,6 @@
           <folding>
             <element signature="e#14#51#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/internal/domain/entities/Event.pb.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="532" column="5" selection-start-line="532" selection-start-column="5" selection-end-line="532" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -687,77 +415,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/logs/application.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/internal/utils/server_config.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/go.mod">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/cmd/create.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/cmd/delete.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-          <folding>
-            <element signature="e#587#702#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/cmd/list.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="68" column="13" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/cmd/root.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="43" column="41" lean-forward="true" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/cmd/runServer.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/cmd/update.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="34" column="45" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/configs/conf.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/internal/adapters/servers/grpc_server/client.go">
       <provider selected="true" editor-type-id="text-editor">
@@ -769,48 +428,261 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/internal/adapters/servers/grpc_server/handler.go">
+    <entry file="file://$PROJECT_DIR$/../github.com/assizkii/calendar/api/cmd/delete.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="93" column="16" selection-start-line="93" selection-start-column="16" selection-end-line="93" selection-end-column="16" />
+        <state relative-caret-position="289">
+          <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/internal/adapters/servers/grpc_server/server.go">
+    <entry file="das://732d0d81-a4be-43c0-8aa7-4bd6651ff552/database/calendar/schema/public/sequence/events_id_seq">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+        <state relative-caret-position="15">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/internal/adapters/storages/database/pg.go">
+    <entry file="file://$PROJECT_DIR$/../github.com/assizkii/calendar/api/internal/domain/interfaces/event_storage.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="36" column="55" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
+        <state relative-caret-position="105">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/internal/adapters/storages/inmemory/inmemory.go">
+    <entry file="file://$PROJECT_DIR$/../github.com/assizkii/calendar/api/cmd/list.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="276">
+          <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
           <folding>
-            <element signature="e#18#230#0" expanded="true" />
+            <element signature="e#1061#1310#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://732d0d81-a4be-43c0-8aa7-4bd6651ff552/role/postgres">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/grpc-ecosystem/go-grpc-middleware/logging/zap/server_interceptors.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/assizkii/calendar/api/internal/domain/entities/Event.pb.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/jinzhu/gorm/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="680" column="13" selection-start-line="680" selection-start-column="13" selection-end-line="680" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/assizkii/calendar/api/internal/adapters/servers/grpc_server/server.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="e#21#636#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/jinzhu/gorm/model_struct.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/cmd/delete.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/golang/protobuf/ptypes/timestamp/timestamp.pb.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="118" column="20" selection-start-line="118" selection-start-column="20" selection-end-line="118" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/go1.13.1.linux-amd64/src/database/sql/sql.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="3103" column="14" selection-start-line="3103" selection-start-column="14" selection-end-line="3103" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/internal/domain/entities/Event.pb.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="95" column="16" selection-start-line="95" selection-start-column="16" selection-end-line="95" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/internal/domain/usecases/event.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="42" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/internal/domain/interfaces/event_storage.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/internal/domain/usecases/event.go">
+    <entry file="file://$PROJECT_DIR$/api/cmd/root.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+        <state relative-caret-position="15">
+          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/cmd/runServer.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/jmoiron/sqlx/sqlx.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="319" column="14" selection-start-line="319" selection-start-column="14" selection-end-line="319" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/internal/domain/entities/Event.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="55" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/internal/adapters/servers/grpc_server/handler.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="107" column="54" selection-start-line="107" selection-start-column="45" selection-end-line="107" selection-end-column="54" />
+          <folding>
+            <element signature="e#21#242#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/cmd/list.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="41" column="23" lean-forward="true" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+          <folding>
+            <element signature="e#587#699#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/internal/adapters/storages/inmemory_storage/inmemory.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="57" column="5" lean-forward="true" selection-start-line="55" selection-start-column="4" selection-end-line="57" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/configs/conf.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/internal/utils/server_config.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/cmd/create.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="90" column="34" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="34" />
+          <folding>
+            <element signature="e#587#753#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/cmd/update.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="86" column="33" selection-start-line="86" selection-start-column="31" selection-end-line="86" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="150">
+            <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/internal/adapters/servers/grpc_server/server.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="44" column="11" selection-start-line="44" selection-start-column="11" selection-end-line="44" selection-end-column="11" />
+          <folding>
+            <element signature="e#21#584#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/internal/adapters/storages/database_storage/pg.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="206" column="29" lean-forward="true" selection-start-line="206" selection-start-column="12" selection-end-line="206" selection-end-column="29" />
+          <folding>
+            <element signature="e#26#271#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migrations/event.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/logs/application.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="359">
+          <caret line="103" column="33" selection-start-line="103" selection-start-column="33" selection-end-line="103" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/go.mod">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
         </state>
       </provider>
     </entry>

@@ -1,10 +1,10 @@
 package grpc_server
 
 import (
-	"fmt"
-	"github.com/assizkii/calendar/api/internal/adapters/storages/inmemory"
+	"github.com/assizkii/calendar/api/internal/adapters/storages/database_storage"
 	"github.com/assizkii/calendar/api/internal/domain/entities"
 	"github.com/assizkii/calendar/api/internal/utils"
+	"fmt"
 	grpc_middleware "github.com/grpc-ecosystem/go-grpc-middleware"
 	grpc_zap "github.com/grpc-ecosystem/go-grpc-middleware/logging/zap"
 	grpc_recovery "github.com/grpc-ecosystem/go-grpc-middleware/recovery"
@@ -18,12 +18,12 @@ import (
 )
 
 func StartServer() {
-	fmt.Println("Starting Calendar Service Server")
+	fmt.Println("Starting Calendar Service Servers")
 	appConf := utils.GetAppConfig()
 
 	listener, err := net.Listen("tcp", appConf.Host)
 	if err != nil {
-		log.Fatalf("failed to listen %v", err)
+		log.Fatalf("Failed to listen %v", err)
 	}
 
 	logger, err := utils.InitLogger(appConf)
@@ -39,9 +39,10 @@ func StartServer() {
 		grpc_recovery.UnaryServerInterceptor(),
 	)), )
 
-	// init storage type
-	storage := inmemory.New()
 
+	dsn := "host="+appConf.DbHost+" user="+appConf.DbUser+" password="+appConf.DbPassword+" dbname="+appConf.DbName+"  sslmode=disable"
+	// init storage type
+	storage := database_storage.New(dsn)
 	srv := &EventServiceServer{storage}
 	entities.RegisterEventServiceServer(server, srv)
 

@@ -35,25 +35,22 @@ var createCmd = &cobra.Command{
 		title, err := cmd.Flags().GetString("title")
 		description, err := cmd.Flags().GetString("description")
 		start, err := cmd.Flags().GetString("start")
-		ownerId, err := cmd.Flags().GetString("owner_id")
-		//duration, err := cmd.Flags().GetString("duration")
-		//notify, err := cmd.Flags().GetString("notify")
+		owner, err := cmd.Flags().GetInt32("owner")
+		end, err := cmd.Flags().GetString("end")
 
 		if err != nil {
 			return err
 		}
 
 		timeStart, err := time.Parse("2006-01-02", start)
-		//durationTime, err := time.Parse("2006-01-02", duration)
-		//notifyTime, err := time.Parse("2006-01-02", notify)
+		timeEnd, err := time.Parse("2006-01-02", end)
 
 		if err != nil {
 			return err
 		}
 
 		eventStart, err := ptypes.TimestampProto(timeStart)
-		//eventDuration, err :=  ptypes.TimestampProto(durationTime)
-		//eventNotify, err :=  ptypes.TimestampProto(notifyTime)
+		eventEnd, err :=  ptypes.TimestampProto(timeEnd)
 
 		if err != nil {
 			return err
@@ -64,9 +61,8 @@ var createCmd = &cobra.Command{
 			Title:       title,
 			Description: description,
 			Start:       eventStart,
-			OwnerId:     ownerId,
-			//Duration: eventDuration,
-			//NotifyTime: eventNotify,
+			OwnerId:     owner,
+			EndTime: eventEnd,
 		}
 
 		res, err := client.CreateEvent(
@@ -81,7 +77,7 @@ var createCmd = &cobra.Command{
 			return err
 		}
 
-		fmt.Printf("Event created: %s\n", res.Event.Id)
+		fmt.Printf("Event created: %s\n", res.Id)
 		return nil
 	},
 }
@@ -90,10 +86,9 @@ func init() {
 
 	createCmd.Flags().StringP("title", "t", "", "event title")
 	createCmd.Flags().StringP("description", "d", "", "event description")
-	createCmd.Flags().StringP("owner_id", "f", "", "event owner")
+	createCmd.Flags().Int32("owner", 0, "event owner")
 	createCmd.Flags().StringP("start", "s", "", "event start, example 2006-01-02")
-	createCmd.Flags().StringP("duration", "", "", "event duration")
-	createCmd.Flags().StringP("notify", "n", "", "event duration")
+	createCmd.Flags().StringP("end", "e", "", "event end, example 2006-01-02")
 
 	createCmd.MarkFlagRequired("title")
 	createCmd.MarkFlagRequired("start")

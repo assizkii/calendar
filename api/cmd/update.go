@@ -36,25 +36,22 @@ var updateCmd = &cobra.Command{
 		title, err := cmd.Flags().GetString("title")
 		description, err := cmd.Flags().GetString("description")
 		start, err := cmd.Flags().GetString("start")
-		ownerId, err := cmd.Flags().GetString("owner_id")
-		duration, err := cmd.Flags().GetString("duration")
-		notify, err := cmd.Flags().GetString("notify")
+		owner, err := cmd.Flags().GetInt32("owner")
+		end, err := cmd.Flags().GetString("end")
 
 		if err != nil {
 			return err
 		}
 
 		timeStart, err := time.Parse("2006-01-02", start)
-		durationTime, err := time.Parse("2006-01-02", duration)
-		notifyTime, err := time.Parse("2006-01-02", notify)
+		timeEnd, err := time.Parse("2006-01-02", end)
 
 		if err != nil {
 			return err
 		}
 
 		eventStart, err := ptypes.TimestampProto(timeStart)
-		eventDuration, err := ptypes.TimestampProto(durationTime)
-		eventNotify, err := ptypes.TimestampProto(notifyTime)
+		eventEnd, err :=  ptypes.TimestampProto(timeEnd)
 
 		if err != nil {
 			return err
@@ -65,9 +62,8 @@ var updateCmd = &cobra.Command{
 			Title:       title,
 			Description: description,
 			Start:       eventStart,
-			OwnerId:     ownerId,
-			Duration:    eventDuration,
-			NotifyTime:  eventNotify,
+			OwnerId:     owner,
+			EndTime: eventEnd,
 		}
 
 		res, err := client.UpdateEvent(
@@ -81,7 +77,7 @@ var updateCmd = &cobra.Command{
 		if err != nil {
 			return err
 		}
-		fmt.Printf("Event created: %s\n", res.Id)
+		fmt.Printf("Event updated: %s\n", res.Id)
 		return nil
 	},
 }
@@ -91,10 +87,9 @@ func init() {
 	updateCmd.Flags().StringP("id", "i", "", "event id")
 	updateCmd.Flags().StringP("title", "t", "", "event title")
 	updateCmd.Flags().StringP("description", "d", "", "event description")
-	updateCmd.Flags().StringP("owner_id", "f", "", "event owner")
-	updateCmd.Flags().StringP("start", "s", "", "date to")
-	updateCmd.Flags().StringP("duration", "", "", "event duration")
-	updateCmd.Flags().StringP("notify", "n", "", "event duration")
+	updateCmd.Flags().Int32("owner", 0, "event owner")
+	updateCmd.Flags().StringP("start", "s", "", "event start, example 2006-01-02")
+	updateCmd.Flags().StringP("end", "e", "", "event end, example 2006-01-02")
 
 	updateCmd.MarkFlagRequired("id")
 

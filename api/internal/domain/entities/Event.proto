@@ -4,7 +4,9 @@ option go_package = "entities";
 
 package entities;
 
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
 import "google/protobuf/timestamp.proto";
+
 
 enum Period {
     ALL = 0;
@@ -14,13 +16,12 @@ enum Period {
 }
 
 message Event {
-    string id = 1;
-    string title = 2;
-    string description = 3;
-    string owner_id = 4;
-    google.protobuf.Timestamp start = 5;
-    google.protobuf.Timestamp duration = 6;
-    google.protobuf.Timestamp notify_time = 7;
+    string id = 1; //`db:"id"`
+    string title = 2; //`db:"title"`
+    string description = 3; //`db:"description"`
+    int32 owner_id = 4; //`db:"owner_id"`
+    google.protobuf.Timestamp start = 5 [(gogoproto.stdtime) = true];
+    google.protobuf.Timestamp end_time = 6 [(gogoproto.stdtime) = true];
 }
 
 
@@ -28,7 +29,7 @@ message EventCreateRequest {
     Event event = 1;
 }
 message EventCreateResponse {
-    Event event = 1;
+    string id = 1;
 }
 
 message EventUpdateRequest {

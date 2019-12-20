@@ -1,4 +1,4 @@
-package inmemory
+package inmemory_storage
 
 import (
 	"errors"
@@ -78,11 +78,11 @@ func (em *EventMemoryStorage) Delete(id string) error {
 	return nil
 }
 
-func (em *EventMemoryStorage) List() map[string]entities.Event {
+func (em *EventMemoryStorage) List() (map[string]entities.Event, error ){
 	em.mx.RLock()
 	defer em.mx.RUnlock()
 
-	return em.store
+	return em.store, nil
 }
 
 func (em *EventMemoryStorage) Validate(e entities.Event) error {
@@ -97,11 +97,11 @@ func (em *EventMemoryStorage) Validate(e entities.Event) error {
 	return nil
 }
 
-func (em *EventMemoryStorage) FilterByDate(from time.Time) []entities.Event {
+func (em *EventMemoryStorage) FilterByDate(from time.Time) ([]entities.Event, error) {
 
 	var filteredEvents []entities.Event
-
-	for _, event := range em.List() {
+	list, _ = em.List()
+	for _, event := range list {
 		if event.GetStart().GetSeconds() >= from.Unix() {
 			filteredEvents = append(filteredEvents, event)
 		}
@@ -110,5 +110,5 @@ func (em *EventMemoryStorage) FilterByDate(from time.Time) []entities.Event {
 	sort.SliceStable(filteredEvents, func(i, j int) bool {
 		return filteredEvents[i].GetStart().Seconds < filteredEvents[j].GetStart().Seconds
 	})
-	return filteredEvents
+	return filteredEvents, nil
 }

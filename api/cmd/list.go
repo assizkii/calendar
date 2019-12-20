@@ -31,7 +31,7 @@ var listCmd = &cobra.Command{
 	Short: "event list",
 	Long:  `Event list for any time: day, week or month`,
 	RunE: func(cmd *cobra.Command, args []string) error {
-
+		initClient()
 		period, err := cmd.Flags().GetString("period")
 		var eventPeriod entities.Period
 
@@ -58,8 +58,11 @@ var listCmd = &cobra.Command{
 		req := &entities.EventListRequest{
 			Period: eventPeriod,
 		}
-		stream, err := client.EventList(context.Background(), req)
 
+		stream, err := client.EventList(context.Background(), req)
+		if err != nil {
+			return err
+		}
 		for {
 			// stream.Recv returns a pointer to a EventList at the current iteration
 			res, err := stream.Recv()
