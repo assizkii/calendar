@@ -1,5 +1,5 @@
-GIT_TERMINAL_PROMPT=1
-
 build:
 	@echo "Build start"
-	go build ./sender
+	go build -o api ./pkg/api/main.go
+	go build -o scheduler ./pkg/scheduler/main.go
+	go build -o sender ./pkg/sender/main.go

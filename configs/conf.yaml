@@ -1,5 +1,5 @@
 host: :50051
-logFile: ./api/logs/application.log
+logFile: ./pkg/api/logs/application.log
 logLevel: info
 
 dbHost: 172.18.0.2
