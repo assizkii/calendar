@@ -1,8 +1,8 @@
 package database_storage
 
 import (
-	"calendar/entities"
-	"calendar/api/internal/domain/interfaces"
+	"github.com/assizkii/calendar/entities"
+	"github.com/assizkii/calendar/api/internal/domain/interfaces"
 	"errors"
 	"fmt"
 	"github.com/golang/protobuf/ptypes"

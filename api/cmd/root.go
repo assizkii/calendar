@@ -3,8 +3,8 @@ package cmd
 import (
 	"context"
 	"fmt"
-	"calendar/api/internal/adapters/servers/grpc_server"
-	"calendar/entities"
+	"github.com/assizkii/calendar/api/internal/adapters/servers/grpc_server"
+	"github.com/assizkii/calendar/entities"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 	"google.golang.org/grpc"

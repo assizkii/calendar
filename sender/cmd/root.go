@@ -16,7 +16,7 @@ limitations under the License.
 package cmd
 
 import (
-  "calendar/sender/internal/notify"
+  "github.com/assizkii/calendar/sender/internal/notify"
   "fmt"
   "github.com/spf13/cobra"
   "os"

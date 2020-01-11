@@ -18,7 +18,7 @@ package cmd
 import (
 	"context"
 	"fmt"
-	"calendar/entities"
+	"github.com/assizkii/calendar/entities"
 	"github.com/golang/protobuf/ptypes"
 	"github.com/google/uuid"
 	"github.com/spf13/cobra"

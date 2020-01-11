@@ -1,7 +1,7 @@
 package schedule
 
 import (
-	"calendar/entities"
+	"github.com/assizkii/calendar/entities"
 	"context"
 	"encoding/json"
 	"fmt"

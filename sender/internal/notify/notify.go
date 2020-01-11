@@ -1,7 +1,7 @@
 package notify
 
 import (
-	"calendar/entities"
+	"github.com/assizkii/calendar/entities"
 	"encoding/json"
 	"github.com/spf13/viper"
 	"github.com/streadway/amqp"

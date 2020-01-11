@@ -1,7 +1,7 @@
 package http
 
 import (
-	"calendar/api/internal/adapters/utils"
+	"github.com/assizkii/calendar/api/internal/adapters/utils"
 	"log"
 	"net/http"
 )

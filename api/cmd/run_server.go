@@ -16,7 +16,7 @@ limitations under the License.
 package cmd
 
 import (
-	"calendar/api/internal/adapters/servers/grpc_server"
+	"github.com/assizkii/calendar/api/internal/adapters/servers/grpc_server"
 
 	"fmt"
 	"github.com/spf13/cobra"

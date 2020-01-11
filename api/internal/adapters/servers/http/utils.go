@@ -2,7 +2,7 @@ package http
 
 import (
 	"encoding/json"
-	"calendar/internal/domain/entities"
+	"github.com/assizkii/calendar/internal/domain/entities"
 	"github.com/golang/protobuf/ptypes"
 	"net/http"
 	"time"

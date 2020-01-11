@@ -1,7 +1,7 @@
 package interfaces
 
 import (
-	"calendar/entities"
+	"github.com/assizkii/calendar/entities"
 	"time"
 )
 

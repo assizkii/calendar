@@ -3,8 +3,8 @@ package inmemory_storage
 import (
 	"errors"
 	"fmt"
-	"calendar/entities"
-	"calendar/api/internal/domain/interfaces"
+	"github.com/assizkii/calendar/entities"
+	"github.com/assizkii/calendar/api/internal/domain/interfaces"
 	"github.com/google/uuid"
 	"sort"
 	"strings"

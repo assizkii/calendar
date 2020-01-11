@@ -15,7 +15,7 @@ limitations under the License.
 */
 package main
 
-import "sender/cmd"
+import "github.com/assizkii/calendar/sender/cmd"
 
 func main() {
   cmd.Execute()

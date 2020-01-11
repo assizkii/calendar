@@ -15,7 +15,7 @@ limitations under the License.
 */
 package main
 
-import "scheduler/cmd"
+import "github.com/assizkii/calendar/scheduler/cmd"
 
 func main() {
   cmd.Execute()

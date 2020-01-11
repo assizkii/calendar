@@ -16,7 +16,7 @@ limitations under the License.
 package cmd
 
 import (
-  "calendar/scheduler/internal/schedule"
+  "github.com/assizkii/calendar/scheduler/internal/schedule"
   "fmt"
   "github.com/spf13/cobra"
   "os"
