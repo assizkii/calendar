@@ -12,17 +12,17 @@ import (
 	"time"
 )
 
-var client entities.EventServiceClient
-var requestCtx context.Context
-var requestOpts grpc.DialOption
-var cfgFile string
-
-// rootCmd represents the base command when called without any subcommands
-var rootCmd = &cobra.Command{
-	Use:   "calendar",
-	Short: "A simple event calendar",
-	Long:  `Event calendar`,
-}
+var (
+	client entities.EventServiceClient
+	requestCtx context.Context
+	requestOpts grpc.DialOption
+	cfgFile string
+	rootCmd = &cobra.Command{
+		Use:   "calendar",
+		Short: "A simple event calendar",
+		Long:  `Event calendar`,
+	}
+)
 
 func Execute() {
 	if err := rootCmd.Execute(); err != nil {

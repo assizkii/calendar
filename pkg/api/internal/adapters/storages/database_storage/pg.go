@@ -1,10 +1,10 @@
 package database_storage
 
 import (
-	"github.com/assizkii/calendar/entities"
-	"github.com/assizkii/calendar/pkg/api/internal/domain/interfaces"
 	"errors"
 	"fmt"
+	"github.com/assizkii/calendar/entities"
+	"github.com/assizkii/calendar/pkg/api/internal/domain/interfaces"
 	"github.com/golang/protobuf/ptypes"
 	_ "github.com/jackc/pgx/stdlib"
 	"github.com/jmoiron/sqlx"
@@ -17,22 +17,20 @@ import (
 	"time"
 )
 
-
 type PgStorage struct {
 	connection *sqlx.DB
 }
 
 type EventDb struct {
-	Id int `db:"id"`
-	Title string `db:"title"`
-	Description string `db:"description"`
-	OwnerId int `db:"owner_id"`
-	Start time.Time `db:"start"`
-	EndTime time.Time `db:"end_time"`
+	Id          int       `db:"id"`
+	Title       string    `db:"title"`
+	Description string    `db:"description"`
+	OwnerId     int       `db:"owner_id"`
+	Start       time.Time `db:"start"`
+	EndTime     time.Time `db:"end_time"`
 }
 
 func (pg *PgStorage) Validate(event entities.Event) error {
-
 	switch "" {
 	case strings.TrimSpace(event.Description):
 		return errors.New("description field cannot be empty string")
@@ -44,7 +42,6 @@ func (pg *PgStorage) Validate(event entities.Event) error {
 }
 
 func (pg *PgStorage) Get(id string) (entities.Event, error) {
-
 	var event entities.Event
 	var eventRow EventDb
 	query := `select *	from events where id=$1`
@@ -54,27 +51,24 @@ func (pg *PgStorage) Get(id string) (entities.Event, error) {
 		return event, err
 	}
 	eventStart, err := ptypes.TimestampProto(eventRow.Start)
-	eventEnd, err :=  ptypes.TimestampProto(eventRow.EndTime)
+	eventEnd, err := ptypes.TimestampProto(eventRow.EndTime)
 	if err != nil {
 		return event, err
 	}
 
 	event = entities.Event{
-		Id:     strconv.Itoa(eventRow.Id),
+		Id:          strconv.Itoa(eventRow.Id),
 		OwnerId:     int32(eventRow.OwnerId),
 		Title:       eventRow.Title,
 		Description: eventRow.Description,
-		Start:      eventStart,
-		EndTime: eventEnd,
-
-
+		Start:       eventStart,
+		EndTime:     eventEnd,
 	}
 
 	return event, nil
 }
 
 func (pg *PgStorage) Add(e entities.Event) (string, error) {
-
 	if err := pg.Validate(e); err != nil {
 		return "", fmt.Errorf("validate error: %s", err)
 	}
@@ -92,12 +86,10 @@ func (pg *PgStorage) Add(e entities.Event) (string, error) {
 	if err != nil {
 		return "", err
 	}
-
 	return strconv.Itoa(id), nil
 }
 
 func (pg *PgStorage) Update(id string, e entities.Event) error {
-
 	if err := pg.Validate(e); err != nil {
 		return fmt.Errorf("validate error: %s", err)
 	}
@@ -113,24 +105,20 @@ func (pg *PgStorage) Update(id string, e entities.Event) error {
 	if err != nil {
 		return err
 	}
-
 	return nil
 }
 
 func (pg *PgStorage) Delete(id string) error {
-
 	query := `delete from events where id=$1`
 
 	_, err := pg.connection.Exec(query, id)
 	if err != nil {
 		return err
 	}
-
 	return nil
 }
 
-func (pg *PgStorage) List() (map[string]entities.Event, error){
-
+func (pg *PgStorage) List() (map[string]entities.Event, error) {
 	var result map[string]entities.Event
 	var events []entities.Event
 
@@ -140,14 +128,13 @@ func (pg *PgStorage) List() (map[string]entities.Event, error){
 		return nil, err
 	}
 
-	for _, event := range events  {
+	for _, event := range events {
 		result[event.GetId()] = event
 	}
 	return result, nil
 }
 
 func (pg *PgStorage) FilterByDate(startTime time.Time, endTime time.Time) ([]entities.Event, error) {
-
 	var events []entities.Event
 	var eventsRows []EventDb
 	query := `select id, title, description, owner_id, start, end_time
@@ -157,31 +144,26 @@ func (pg *PgStorage) FilterByDate(startTime time.Time, endTime time.Time) ([]ent
 	if err != nil {
 		return nil, err
 	}
-
-	for _, eventRow := range eventsRows  {
+	for _, eventRow := range eventsRows {
 		eventStart, err := ptypes.TimestampProto(eventRow.Start)
-		eventEnd, err :=  ptypes.TimestampProto(eventRow.EndTime)
+		eventEnd, err := ptypes.TimestampProto(eventRow.EndTime)
 		if err != nil {
 			return nil, err
 		}
 		event := entities.Event{
-			Id:     strconv.Itoa(eventRow.Id),
+			Id:          strconv.Itoa(eventRow.Id),
 			OwnerId:     int32(eventRow.OwnerId),
 			Title:       eventRow.Title,
 			Description: eventRow.Description,
-			Start:      eventStart,
-			EndTime: eventEnd,
-
-
+			Start:       eventStart,
+			EndTime:     eventEnd,
 		}
 		events = append(events, event)
 	}
-
 	return events, nil
 }
 
-func New(dsn string) interfaces.EventStorage{
-
+func New(dsn string) interfaces.EventStorage {
 	db, err := sqlx.Open("pgx", dsn)
 	if err != nil {
 		log.Fatalf("Failed to connect: %v", err)
@@ -193,13 +175,9 @@ func New(dsn string) interfaces.EventStorage{
 	return &PgStorage{db}
 }
 
-
 // sql migrations from migrations folder
-func Migrate(db *sqlx.DB) error  {
-
-
+func Migrate(db *sqlx.DB) error {
 	err := filepath.Walk("./migrations", func(path string, info os.FileInfo, err error) error {
-
 		if err != nil {
 			return err
 		}
@@ -209,16 +187,13 @@ func Migrate(db *sqlx.DB) error  {
 			if err != nil {
 				return err
 			}
-
 			fileValue := string(fileData)
 			_, err = db.Exec(fileValue)
 			if err != nil {
 				return err
 			}
 		}
-
 		return nil
 	})
-
 	return err
 }

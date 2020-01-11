@@ -21,7 +21,7 @@ func failOnError(err error, msg string) {
 	}
 }
 
-func Serve()  {
+func Serve() {
 	conn, err := amqp.Dial(viper.GetString("ampq"))
 	failOnError(err, "Failed to connect to RabbitMQ")
 	defer conn.Close()
@@ -32,11 +32,11 @@ func Serve()  {
 
 	q, err := amqpChannel.QueueDeclare(
 		"events", // name
-		false,   // durable
-		false,   // delete when unused
-		false,   // exclusive
-		false,   // no-wait
-		nil,     // arguments
+		false,    // durable
+		false,    // delete when unused
+		false,    // exclusive
+		false,    // no-wait
+		nil,      // arguments
 	)
 	failOnError(err, "Failed to declare a queue")
 
@@ -57,13 +57,10 @@ func Serve()  {
 	signal.Notify(sCh, os.Interrupt)
 }
 
-func checkEvent(amqpChannel *amqp.Channel, q amqp.Queue)  {
-
-
+func checkEvent(amqpChannel *amqp.Channel, q amqp.Queue) {
 	requestCtx, _ := context.WithTimeout(context.Background(), 10*time.Second)
 	// Establish insecure grpc options (no TLS)
 	requestOpts := grpc.WithInsecure()
-
 	conn, err := grpc.DialContext(requestCtx, ":50051", requestOpts)
 
 	if err != nil {
@@ -71,7 +68,6 @@ func checkEvent(amqpChannel *amqp.Channel, q amqp.Queue)  {
 	}
 
 	client := entities.NewEventServiceClient(conn)
-
 	req := &entities.EventListRequest{
 		Period: entities.Period_DAY,
 	}

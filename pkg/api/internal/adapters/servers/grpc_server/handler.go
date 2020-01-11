@@ -16,7 +16,6 @@ type EventServiceServer struct {
 	storage interfaces.EventStorage
 }
 
-
 func (s *EventServiceServer) CreateEvent(ctx context.Context, req *entities.EventCreateRequest) (*entities.EventCreateResponse, error) {
 
 	event := req.GetEvent()
@@ -26,8 +25,8 @@ func (s *EventServiceServer) CreateEvent(ctx context.Context, req *entities.Even
 		Title:       event.GetTitle(),
 		Description: event.GetDescription(),
 		Start:       event.GetStart(),
-		OwnerId: event.GetOwnerId(),
-		EndTime: event.GetEndTime(),
+		OwnerId:     event.GetOwnerId(),
+		EndTime:     event.GetEndTime(),
 	}
 
 	id, err := s.storage.Add(eventData)
@@ -50,8 +49,8 @@ func (s *EventServiceServer) UpdateEvent(ctx context.Context, req *entities.Even
 		Title:       event.GetTitle(),
 		Description: event.GetDescription(),
 		Start:       event.GetStart(),
-		OwnerId: event.GetOwnerId(),
-		EndTime: event.GetEndTime(),
+		OwnerId:     event.GetOwnerId(),
+		EndTime:     event.GetEndTime(),
 	}
 
 	err := s.storage.Update(event.GetId(), eventData)
@@ -102,8 +101,6 @@ func (s *EventServiceServer) EventList(req *entities.EventListRequest, stream en
 	default:
 		return status.Errorf(codes.Internal, fmt.Sprintf("Steam error: %v", errors.New("you must set correct period")))
 	}
-
-
 
 	eventList, err := s.storage.FilterByDate(timeStart, timeEnd)
 	if err != nil {

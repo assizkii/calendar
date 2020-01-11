@@ -1,8 +1,8 @@
 package notify
 
 import (
-	"github.com/assizkii/calendar/entities"
 	"encoding/json"
+	"github.com/assizkii/calendar/entities"
 	"github.com/spf13/viper"
 	"github.com/streadway/amqp"
 	"log"
@@ -14,8 +14,7 @@ func failOnError(err error, msg string) {
 	}
 }
 
-
-func Serve()  {
+func Serve() {
 	conn, err := amqp.Dial(viper.GetString("ampq"))
 	failOnError(err, "Failed to connect to RabbitMQ")
 	defer conn.Close()
@@ -30,9 +29,7 @@ func Serve()  {
 	sendNotify(amqpChannel, queue)
 }
 
-
-func sendNotify(amqpChannel *amqp.Channel, queue amqp.Queue )  {
-
+func sendNotify(amqpChannel *amqp.Channel, queue amqp.Queue) {
 	err := amqpChannel.Qos(1, 0, false)
 	failOnError(err, "Could not configure QoS")
 
@@ -51,9 +48,7 @@ func sendNotify(amqpChannel *amqp.Channel, queue amqp.Queue )  {
 
 	go func() {
 		for d := range messageChannel {
-
 			event := &entities.Event{}
-
 			err := json.Unmarshal(d.Body, event)
 
 			if err != nil {
@@ -68,9 +63,6 @@ func sendNotify(amqpChannel *amqp.Channel, queue amqp.Queue )  {
 
 		}
 	}()
-
 	// Stop for program termination
 	<-stopChan
-
-
 }
