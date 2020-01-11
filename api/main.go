@@ -1,6 +1,6 @@
 package main
 
-import "github.com/assizkii/calendar/api/cmd"
+import "calendar/api/cmd"
 
 func main() {
 

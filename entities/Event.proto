@@ -4,7 +4,6 @@ option go_package = "entities";
 
 package entities;
 
-import "github.com/gogo/protobuf/gogoproto/gogo.proto";
 import "google/protobuf/timestamp.proto";
 
 
@@ -20,8 +19,8 @@ message Event {
     string title = 2; //`db:"title"`
     string description = 3; //`db:"description"`
     int32 owner_id = 4; //`db:"owner_id"`
-    google.protobuf.Timestamp start = 5 [(gogoproto.stdtime) = true];
-    google.protobuf.Timestamp end_time = 6 [(gogoproto.stdtime) = true];
+    google.protobuf.Timestamp start = 5 ;
+    google.protobuf.Timestamp end_time = 6 ;
 }
 
 

@@ -19,7 +19,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/assizkii/calendar/api/internal/domain/entities"
+	"calendar/entities"
 	"io"
 
 	"github.com/spf13/cobra"

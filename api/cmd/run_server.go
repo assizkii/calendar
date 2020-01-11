@@ -16,7 +16,7 @@ limitations under the License.
 package cmd
 
 import (
-	"github.com/assizkii/calendar/api/internal/adapters/servers/grpc_server"
+	"calendar/api/internal/adapters/servers/grpc_server"
 
 	"fmt"
 	"github.com/spf13/cobra"
@@ -25,7 +25,7 @@ import (
 
 // runServerCmd represents the runServer command
 var runServerCmd = &cobra.Command{
-	Use:   "runServer",
+	Use:   "run_server",
 	Short: "start grpc server",
 	Long:  `start grpc server`,
 	Run: func(cmd *cobra.Command, args []string) {

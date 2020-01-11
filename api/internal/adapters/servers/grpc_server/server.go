@@ -1,9 +1,9 @@
 package grpc_server
 
 import (
-	"github.com/assizkii/calendar/api/internal/adapters/storages/database_storage"
-	"github.com/assizkii/calendar/api/internal/domain/entities"
-	"github.com/assizkii/calendar/api/internal/utils"
+	"calendar/api/internal/adapters/storages/database_storage"
+	"calendar/entities"
+	"calendar/api/internal/utils"
 	"fmt"
 	grpc_middleware "github.com/grpc-ecosystem/go-grpc-middleware"
 	grpc_zap "github.com/grpc-ecosystem/go-grpc-middleware/logging/zap"

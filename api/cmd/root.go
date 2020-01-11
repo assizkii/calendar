@@ -3,8 +3,8 @@ package cmd
 import (
 	"context"
 	"fmt"
-	"github.com/assizkii/calendar/api/internal/adapters/servers/grpc_server"
-	"github.com/assizkii/calendar/api/internal/domain/entities"
+	"calendar/api/internal/adapters/servers/grpc_server"
+	"calendar/entities"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 	"google.golang.org/grpc"
@@ -65,7 +65,7 @@ func initConfig() {
 		viper.SetConfigFile(cfgFile)
 	} else {
 		// Search config in home directory with name ".calendar" (without extension).
-		viper.AddConfigPath("api/configs")
+		viper.AddConfigPath("./configs")
 		viper.SetConfigName("conf")
 	}
 
