@@ -1,3 +1,3 @@
-module github.com/assizkii/calendar/entities
+module entities
 
 go 1.13

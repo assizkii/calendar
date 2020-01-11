@@ -3,32 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9ead2ea1-4f7b-4608-a4c6-f7655beea292" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/cmd/create.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/cmd/create.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/cmd/delete.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/cmd/delete.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/cmd/list.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/cmd/list.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/cmd/root.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/cmd/root.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/cmd/run_server.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/cmd/run_server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/cmd/update.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/cmd/update.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/internal/adapters/servers/grpc_server/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/internal/adapters/servers/grpc_server/client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/internal/adapters/servers/grpc_server/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/internal/adapters/servers/grpc_server/handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/internal/adapters/servers/grpc_server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/internal/adapters/servers/grpc_server/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/internal/adapters/servers/http/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/internal/adapters/servers/http/handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/internal/adapters/servers/http/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/internal/adapters/servers/http/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/internal/adapters/servers/http/utils.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/internal/adapters/servers/http/utils.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/internal/adapters/storages/database_storage/pg.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/internal/adapters/storages/database_storage/pg.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/internal/adapters/storages/inmemory_storage/inmemory.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/internal/adapters/storages/inmemory_storage/inmemory.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/internal/domain/interfaces/event_storage.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/internal/domain/interfaces/event_storage.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/entities/Event.proto" beforeDir="false" afterPath="$PROJECT_DIR$/entities/Event.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entities/go.mod" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scheduler/cmd/root.go" beforeDir="false" afterPath="$PROJECT_DIR$/scheduler/cmd/root.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scheduler/internal/schedule/schedule.go" beforeDir="false" afterPath="$PROJECT_DIR$/scheduler/internal/schedule/schedule.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scheduler/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/scheduler/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sender/cmd/root.go" beforeDir="false" afterPath="$PROJECT_DIR$/sender/cmd/root.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sender/internal/notify/notify.go" beforeDir="false" afterPath="$PROJECT_DIR$/sender/internal/notify/notify.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sender/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/sender/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/entities/go.mod" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,28 +50,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/entities/Event.proto">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/entities/go.mod">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/main.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+            <state>
+              <caret column="7" selection-start-column="7" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -104,10 +62,19 @@
         <entry file="file://$PROJECT_DIR$/entities/Event.pb.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="7680">
-              <caret line="512" column="11" lean-forward="true" selection-start-line="512" selection-start-column="11" selection-end-line="512" selection-end-column="11" />
+              <caret line="512" column="11" selection-start-line="512" selection-start-column="11" selection-end-line="512" selection-end-column="11" />
               <folding>
                 <element signature="e#91#352#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/entities/Event.proto">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -224,8 +191,8 @@
         <option value="$PROJECT_DIR$/scheduler/main.go" />
         <option value="$PROJECT_DIR$/scheduler/internal/schedule/schedule.go" />
         <option value="$PROJECT_DIR$/go.mod" />
-        <option value="$PROJECT_DIR$/entities/go.mod" />
         <option value="$PROJECT_DIR$/entities/Event.proto" />
+        <option value="$PROJECT_DIR$/entities/go.mod" />
       </list>
     </option>
   </component>
@@ -258,6 +225,36 @@
               <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
               <item name="calendar" type="462c0819:PsiDirectoryNode" />
               <item name="entities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="GOPATH &lt;organizer&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
+            </path>
+            <path>
+              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="GOPATH &lt;organizer&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="GOPATH &lt;organizer&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="github.com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="GOPATH &lt;organizer&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="github.com" type="462c0819:PsiDirectoryNode" />
+              <item name="assizkii" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -754,23 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/entities/github.com/assizkii/calendar/entities/Event.pb.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding>
-            <element signature="e#91#352#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entities/go.mod">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/main.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -781,17 +761,31 @@
     <entry file="file://$PROJECT_DIR$/entities/Event.pb.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7680">
-          <caret line="512" column="11" lean-forward="true" selection-start-line="512" selection-start-column="11" selection-end-line="512" selection-end-column="11" />
+          <caret line="512" column="11" selection-start-line="512" selection-start-column="11" selection-end-line="512" selection-end-column="11" />
           <folding>
             <element signature="e#91#352#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/entities/github.com/assizkii/calendar/entities/Event.pb.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/entities/Event.proto">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entities/go.mod">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
         </state>
       </provider>
     </entry>
